@@ -17,14 +17,17 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    #[allow(unused)]
     fn area(&self) -> u32 {
         self.width * self.height
     }
 
+    #[allow(unused)]
     fn can_hold(&self, another: &Rectangle) -> bool {
         self.width >= another.width && self.height >= another.height
     }
 
+    #[allow(unused)]
     fn square(size: u32) -> Rectangle {
         Rectangle { width: size, height: size }
     }
