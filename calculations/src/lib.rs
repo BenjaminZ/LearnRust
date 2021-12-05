@@ -1,5 +1,4 @@
 pub mod calc{
-    use std::collections::hash_map::Entry;
     use std::collections::HashMap;
     use rand::Rng;
 
@@ -7,15 +6,8 @@ pub mod calc{
         let mut map: HashMap<i32, usize> = HashMap::new();
 
         for number in numbers {
-            match map.entry(*number) {
-                Entry::Occupied(mut entry) => {
-                    let value = entry.get() + 1;
-                    entry.insert(value);
-                }
-                Entry::Vacant(entry) => {
-                    entry.insert(1);
-                }
-            }
+            let count = map.entry(*number).or_insert(0);
+            *count += 1;
         }
 
         let (mut max_value, mut max_count) = (0, 0usize);
