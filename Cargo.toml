@@ -1,0 +1,17 @@
+[workspace]
+
+members = [
+    "blog",
+    "calculations",
+    "employees",
+    "guessing_game",
+    "minigrep",
+    "pig_latin",
+    "rectangles",
+    "restaurant",
+    "rust-hello-world"
+]
+
+exclude = [
+    "playground"
+]
