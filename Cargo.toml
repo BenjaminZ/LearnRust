@@ -9,7 +9,8 @@ members = [
     "pig_latin",
     "rectangles",
     "restaurant",
-    "rust-hello-world"
+    "rust-hello-world",
+    "hello"
 ]
 
 exclude = [
